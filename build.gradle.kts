@@ -13,16 +13,16 @@ plugins {
     kotlin("jvm") version "1.6.21"
 }
 
-project.extra["GithubUrl"] = "https://github.com/melxin/devious-plugins-extended"
-project.extra["GithubUserName"] = "melxin"
-project.extra["GithubRepoName"] = "devious-plugins-extended"
+project.extra["GithubUrl"] = "https://github.com/lucid-soft/lucid-plugins"
+project.extra["GithubUserName"] = "lucid-soft"
+project.extra["GithubRepoName"] = "lucid-plugins"
 
 apply<BootstrapPlugin>()
 
 allprojects {
     group = "net.unethicalite"
 
-    project.extra["PluginProvider"] = "melxin"
+    project.extra["PluginProvider"] = "lucid-soft"
     project.extra["ProjectSupportUrl"] = ""
     project.extra["PluginLicense"] = "3-Clause BSD License"
 
