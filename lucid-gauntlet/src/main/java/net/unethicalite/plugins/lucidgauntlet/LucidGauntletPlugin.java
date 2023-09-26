@@ -477,8 +477,6 @@ public class LucidGauntletPlugin extends Plugin
 
         missile = new Missile(projectile, skillIconManager, config.projectileIconSize());
 
-        //hunllef.updateAttackCount();
-
         if (PROJECTILE_PRAYER_IDS.contains(id) && config.hunllefPrayerAudio())
         {
             client.playSoundEffect(SoundEffectID.MAGIC_SPLASH_BOING);
@@ -545,7 +543,7 @@ public class LucidGauntletPlugin extends Plugin
         }
         else if (actor instanceof NPC)
         {
-            if (animationId == 8419)
+            if (animationId == 8419 || animationId == 8418)
             {
                 hunllef.updateAttackCount();
             }

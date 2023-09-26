@@ -1,6 +1,6 @@
 import ProjectVersions.unethicaliteVersion
 
-version = "6.0.0"
+version = "6.0.1"
 
 project.extra["PluginName"] = "Lucid Gauntlet"
 project.extra["PluginDescription"] = "All-in-one plugin for the Gauntlet"

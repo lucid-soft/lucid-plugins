@@ -4,13 +4,22 @@
   "name": "Lucid Gauntlet",
   "description": "All-in-one plugin for the Gauntlet",
   "id": "lucidgauntlet-plugin",
-  "releases": [{
-    "date": "2023-09-25",
-    "sha512sum": "1B5604EA037A42A952CEC8D036C2C9187E5A4595F69227F162674B98B00B66237EA75894290640507A98BF74298DB1B09C8C19B1FBFB6D66CE44B2BB5B610473",
-    "version": "6.0.0",
-    "url": "https://github.com/lucid-soft/lucid-plugins/blob/master/release/lucid-gauntlet-6.0.0.jar?raw=true",
-    "requires": "^1.0.0"
-  }]
+  "releases": [
+    {
+      "date": "2023-09-25",
+      "sha512sum": "1B5604EA037A42A952CEC8D036C2C9187E5A4595F69227F162674B98B00B66237EA75894290640507A98BF74298DB1B09C8C19B1FBFB6D66CE44B2BB5B610473",
+      "version": "6.0.0",
+      "url": "https://github.com/lucid-soft/lucid-plugins/blob/master/release/lucid-gauntlet-6.0.0.jar?raw=true",
+      "requires": "^1.0.0"
+    },
+    {
+      "date": "2023-09-25",
+      "sha512sum": "794A6389B8CA3DAB641520EAE1AAD0FD0DB0C7ADDC447C42277568B777ACEAD59EA56399AECC96ABEBC4533573AE8D99E8E28145629AF1ACFDB2525F63966604",
+      "version": "6.0.1",
+      "url": "https://github.com/lucid-soft/lucid-plugins/blob/master/release/lucid-gauntlet-6.0.1.jar?raw=true",
+      "requires": "^1.0.0"
+    }
+  ]
 }, {
   "projectUrl": "",
   "provider": "lucid-soft",
