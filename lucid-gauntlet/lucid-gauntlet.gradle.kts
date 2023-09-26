@@ -1,9 +1,9 @@
 import ProjectVersions.unethicaliteVersion
 
-version = "6.0.4"
+version = "6.0.5"
 
 project.extra["PluginName"] = "Lucid Gauntlet"
-project.extra["PluginDescription"] = "All-in-one plugin for the Gauntlet"
+project.extra["PluginDescription"] = "All-in-one plugin for the Gauntlet. Original plugin by xKylee."
 
 dependencies {
     annotationProcessor(Libraries.lombok)

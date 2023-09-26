@@ -497,11 +497,9 @@ public class LucidGauntletPlugin extends Plugin
             resourceManager.parseChatMessage(event.getMessage());
         }
 
-        if (event.getMessage().contains("prayers have been disabled")) {
-            if (!client.isPrayerActive(hunllef.getAttackPhase().getPrayer()))
-            {
-                clientThread.invoke(() -> togglePrayer(hunllef.getAttackPhase().getPrayer()));
-            }
+        if (event.getMessage().contains("prayers have been disabled"))
+        {
+            clientThread.invoke(() -> togglePrayer(hunllef.getAttackPhase().getPrayer()));
         }
     }
 
@@ -563,10 +561,7 @@ public class LucidGauntletPlugin extends Plugin
             {
                 hunllef.toggleAttackHunllefAttackStyle();
 
-                if (!client.isPrayerActive(hunllef.getAttackPhase().getPrayer()))
-                {
-                    clientThread.invoke(() -> togglePrayer(hunllef.getAttackPhase().getPrayer()));
-                }
+                clientThread.invoke(() -> togglePrayer(hunllef.getAttackPhase().getPrayer()));
             }
         }
     }

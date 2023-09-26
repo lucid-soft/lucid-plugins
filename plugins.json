@@ -2,13 +2,13 @@
   "projectUrl": "",
   "provider": "lucid-soft",
   "name": "Lucid Gauntlet",
-  "description": "All-in-one plugin for the Gauntlet",
+  "description": "All-in-one plugin for the Gauntlet. Original plugin by xKylee.",
   "id": "lucidgauntlet-plugin",
   "releases": [{
     "date": "2023-09-26",
-    "sha512sum": "AC39F470ACD0849216A1C947C98AE5EB7BEE004F29CE2D03EE361BF71F36BE74A345FBD9C7EC4751BDA8242C98A2D2A8ACCEDD7E4A529EB88A420740213D261B",
-    "version": "6.0.4",
-    "url": "https://github.com/lucid-soft/lucid-plugins/blob/master/release/lucid-gauntlet-6.0.4.jar?raw=true",
+    "sha512sum": "9111DFDF56EDE304ED0D808B308CBC35546CC540C4ED930E5924DAF711FCCA47FA969F4E0FE90432578EFCEC7C0AF4732DB466E3AAAAE32D31D5A051E706CE02",
+    "version": "6.0.5",
+    "url": "https://github.com/lucid-soft/lucid-plugins/blob/master/release/lucid-gauntlet-6.0.5.jar?raw=true",
     "requires": "^1.0.0"
   }]
 }]
