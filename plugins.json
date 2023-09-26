@@ -6,9 +6,9 @@
   "id": "lucidgauntlet-plugin",
   "releases": [{
     "date": "2023-09-26",
-    "sha512sum": "CED8CA5CB5F8A3908FDF91E60C211E354445193E27B20343B8D1D578476F0B99C7165A9934BBECCC80001DFE224CAAAC2407B51FA342F2CC2FADB5ACE54689C1",
-    "version": "6.0.6",
-    "url": "https://github.com/lucid-soft/lucid-plugins/blob/master/release/lucid-gauntlet-6.0.6.jar?raw=true",
+    "sha512sum": "42749FE44DF0CF218BE89DD2D64D3A4835357CD0DAEA0D74D5A0CAE7F7A7279059DE441B6754292C3C27A6E8A27DA2611AE6C39771CB37A496D302EA3F3FE4D0",
+    "version": "6.0.7",
+    "url": "https://github.com/lucid-soft/lucid-plugins/blob/master/release/lucid-gauntlet-6.0.7.jar?raw=true",
     "requires": "^1.0.0"
   }]
 }]

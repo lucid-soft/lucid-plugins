@@ -53,7 +53,8 @@ public class LucidGauntletPlugin extends Plugin
     public static final int HIGH_LEVEL_MAGIC_ATTACK = 1167;
     public static final int HUNLLEF_TORNADO = 8418;
     public static final int HUNLLEF_ATTACK_ANIM = 8419;
-    public static final int HUNLLEF_STYLE_SWITCH = 8754;
+    public static final int HUNLLEF_STYLE_SWITCH_TO_MAGE = 8754;
+    public static final int HUNLLEF_STYLE_SWITCH_TO_RANGE = 8755;
 
     private static final Set<Integer> MELEE_ANIM_IDS = Set.of(
             ONEHAND_STAB_SWORD_ANIMATION, ONEHAND_SLASH_SWORD_ANIMATION,
@@ -497,9 +498,9 @@ public class LucidGauntletPlugin extends Plugin
             resourceManager.parseChatMessage(event.getMessage());
         }
 
-        if (event.getMessage().contains("prayers have been disabled"))
+        if (event.getMessage().contains("prayers have been disabled") && config.autoPrayer())
         {
-            clientThread.invokeLater(() -> togglePrayer(hunllef.getAttackPhase().getPrayer()));
+            clientThread.invoke(() -> togglePrayer(hunllef.getAttackPhase().getPrayer()));
         }
     }
 
@@ -557,11 +558,14 @@ public class LucidGauntletPlugin extends Plugin
                 hunllef.updateAttackCount();
             }
 
-            if (animationId == HUNLLEF_STYLE_SWITCH)
+            if (animationId == HUNLLEF_STYLE_SWITCH_TO_MAGE || animationId == HUNLLEF_STYLE_SWITCH_TO_RANGE)
             {
                 hunllef.toggleAttackHunllefAttackStyle();
 
-                clientThread.invokeLater(() -> togglePrayer(hunllef.getAttackPhase().getPrayer()));
+                if (config.autoPrayer())
+                {
+                    clientThread.invoke(() -> togglePrayer(hunllef.getAttackPhase().getPrayer()));
+                }
             }
         }
     }
