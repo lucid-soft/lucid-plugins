@@ -1,6 +1,19 @@
 [{
   "projectUrl": "",
   "provider": "lucid-soft",
+  "name": "Lucid Gauntlet",
+  "description": "All-in-one plugin for the Gauntlet",
+  "id": "lucidgauntlet-plugin",
+  "releases": [{
+    "date": "2023-09-25",
+    "sha512sum": "076B1A405896829EAACB57D87B7E9D65B0403405942E9B26C73587DE94878F2D333278EBC7C05BDAF8B334E29A9A626A4A48C89308D8BE00DD7E60AF27360347",
+    "version": "6.0.0",
+    "url": "https://github.com/lucid-soft/lucid-plugins/blob/master/release/lucid-gauntlet-6.0.0.jar?raw=true",
+    "requires": "^1.0.0"
+  }]
+}, {
+  "projectUrl": "",
+  "provider": "lucid-soft",
   "name": "Lucid Logout",
   "description": "Logs you out if a pker is near",
   "id": "lucidlogout-plugin",
