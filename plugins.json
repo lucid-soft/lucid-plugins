@@ -5,49 +5,10 @@
   "description": "All-in-one plugin for the Gauntlet",
   "id": "lucidgauntlet-plugin",
   "releases": [{
-    "date": "2023-09-25",
-    "sha512sum": "794A6389B8CA3DAB641520EAE1AAD0FD0DB0C7ADDC447C42277568B777ACEAD59EA56399AECC96ABEBC4533573AE8D99E8E28145629AF1ACFDB2525F63966604",
-    "version": "6.0.1",
-    "url": "https://github.com/lucid-soft/lucid-plugins/blob/master/release/lucid-gauntlet-6.0.1.jar?raw=true",
-    "requires": "^1.0.0"
-  }]
-}, {
-  "projectUrl": "",
-  "provider": "lucid-soft",
-  "name": "Lucid Logout",
-  "description": "Logs you out if a pker is near",
-  "id": "lucidlogout-plugin",
-  "releases": [{
-    "date": "2023-09-25",
-    "sha512sum": "788C0AF7F2CE77DAA77C4D99D59F03FF1D93CA07FF8C88B9472FF611DE229371180BF9F4E20558B86DE630BD8CE61C0C98C8FC02E9936AE44E8CE6BE45061E86",
-    "version": "0.0.1",
-    "url": "https://github.com/lucid-soft/lucid-plugins/blob/master/release/lucid-logout-0.0.1.jar?raw=true",
-    "requires": "^1.0.0"
-  }]
-}, {
-  "projectUrl": "",
-  "provider": "lucid-soft",
-  "name": "Lucid One Click",
-  "description": "Allows you to One-Click interactions",
-  "id": "lucidoneclick-plugin",
-  "releases": [{
-    "date": "2023-09-25",
-    "sha512sum": "0819729C92241D9056D105D4AC3FE0C094E371A6B3F481F28BEE29032C667E6CFD95FD30F40CDDBE6A319D740E75BFD2DD46C2296A62246AB4509CDF6CA4A390",
-    "version": "0.0.1",
-    "url": "https://github.com/lucid-soft/lucid-plugins/blob/master/release/lucid-oneclick-0.0.1.jar?raw=true",
-    "requires": "^1.0.0"
-  }]
-}, {
-  "projectUrl": "",
-  "provider": "lucid-soft",
-  "name": "Lucid Prayer",
-  "description": "Toggles protection prayers on certain events",
-  "id": "lucidprayer-plugin",
-  "releases": [{
-    "date": "2023-09-25",
-    "sha512sum": "EF219B79037BD1C22823B6487343529A2197AA1B1FF57FC47A07440E8BBF6360226D2C4E0CC9ED64D72CECA3140DBCB73EA225A6080F68872A44A31C0C278B16",
-    "version": "0.0.6",
-    "url": "https://github.com/lucid-soft/lucid-plugins/blob/master/release/lucid-prayer-0.0.6.jar?raw=true",
+    "date": "2023-09-26",
+    "sha512sum": "5BC1A2522E71CCCDDD1FCBDE8801E58E28295CBE026688D6E0DD6A11F5F91371ABE3FE7517DBC32D685B7EF412225A34266CFD7C0AA9512C2EEE01FED20CDF8C",
+    "version": "6.0.3",
+    "url": "https://github.com/lucid-soft/lucid-plugins/blob/master/release/lucid-gauntlet-6.0.3.jar?raw=true",
     "requires": "^1.0.0"
   }]
 }]

@@ -76,9 +76,14 @@ public class Hunllef
 
         if (--attackCount <= 0)
         {
-            attackPhase = attackPhase == AttackPhase.RANGE ? AttackPhase.MAGIC : AttackPhase.RANGE;
+
             attackCount = MAX_ATTACK_COUNT;
         }
+    }
+
+    public void toggleAttackHunllefAttackStyle()
+    {
+        attackPhase = attackPhase == AttackPhase.RANGE ? AttackPhase.MAGIC : AttackPhase.RANGE;
     }
 
     public void setIconSize(final int iconSize)

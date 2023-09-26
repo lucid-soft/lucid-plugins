@@ -6,6 +6,7 @@ import lombok.Setter;
 import net.runelite.api.*;
 import net.runelite.api.events.*;
 import net.runelite.api.queries.GameObjectQuery;
+import net.runelite.api.widgets.Widget;
 import net.runelite.api.widgets.WidgetID;
 import net.runelite.client.callback.ClientThread;
 import net.runelite.client.config.ConfigManager;
@@ -16,6 +17,7 @@ import net.runelite.client.plugins.Plugin;
 import net.runelite.client.plugins.PluginDescriptor;
 import net.runelite.client.ui.overlay.Overlay;
 import net.runelite.client.ui.overlay.OverlayManager;
+import net.unethicalite.api.widgets.Widgets;
 import net.unethicalite.plugins.lucidgauntlet.entity.*;
 import net.unethicalite.plugins.lucidgauntlet.overlay.*;
 import net.unethicalite.plugins.lucidgauntlet.resource.ResourceManager;
@@ -32,7 +34,7 @@ import java.util.Set;
 @PluginDescriptor(
         name = "Lucid Gauntlet",
         enabledByDefault = false,
-        description = "All-in-one plugin for the Gauntlet.",
+        description = "All-in-one plugin for the Gauntlet. Original plugin by xKylee.",
         tags = {"gauntlet"}
 )
 @Singleton
@@ -49,7 +51,9 @@ public class LucidGauntletPlugin extends Plugin
     public static final int ONEHAND_SLASH_SWORD_ANIMATION = 390;
     public static final int ONEHAND_STAB_SWORD_ANIMATION = 386;
     public static final int HIGH_LEVEL_MAGIC_ATTACK = 1167;
-    public static final int HUNLEFF_TORNADO = 8418;
+    public static final int HUNLLEF_TORNADO = 8418;
+    public static final int HUNLLEF_ATTACK_ANIM = 8419;
+    public static final int HUNLLEF_STYLE_SWITCH = 8754;
 
     private static final Set<Integer> MELEE_ANIM_IDS = Set.of(
             ONEHAND_STAB_SWORD_ANIMATION, ONEHAND_SLASH_SWORD_ANIMATION,
@@ -543,9 +547,19 @@ public class LucidGauntletPlugin extends Plugin
         }
         else if (actor instanceof NPC)
         {
-            if (animationId == 8419 || animationId == 8418)
+            if (animationId == HUNLLEF_ATTACK_ANIM || animationId == HUNLLEF_TORNADO)
             {
                 hunllef.updateAttackCount();
+            }
+
+            if (animationId == HUNLLEF_STYLE_SWITCH)
+            {
+                hunllef.toggleAttackHunllefAttackStyle();
+
+                if (!client.isPrayerActive(hunllef.getAttackPhase().getPrayer()))
+                {
+                    clientThread.invoke(() -> togglePrayer(hunllef.getAttackPhase().getPrayer()));
+                }
             }
         }
     }
@@ -645,5 +659,14 @@ public class LucidGauntletPlugin extends Plugin
     private boolean isHunllefVarbitSet()
     {
         return client.getVarbitValue(9177) == 1;
+    }
+
+    private static void togglePrayer(Prayer prayer)
+    {
+        Widget widget = Widgets.get(prayer.getWidgetInfo());
+        if (widget != null)
+        {
+            widget.interact(0);
+        }
     }
 }
