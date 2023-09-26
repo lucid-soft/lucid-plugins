@@ -13,7 +13,7 @@ import org.pf4j.Extension;
 import javax.inject.Inject;
 
 @Extension
-@PluginDescriptor(name = "Unethical Logout", description = "Logs you out in wildy if a dangerous player is near", enabledByDefault = false)
+@PluginDescriptor(name = "Lucid Logout", description = "Logs you out in wildy if a dangerous player is near", enabledByDefault = false)
 public class LogoutPlugin extends Plugin
 {
 	@Inject

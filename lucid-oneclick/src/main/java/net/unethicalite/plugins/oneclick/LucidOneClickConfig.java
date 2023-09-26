@@ -5,8 +5,8 @@ import net.runelite.client.config.ConfigGroup;
 import net.runelite.client.config.ConfigItem;
 import net.runelite.client.config.ConfigSection;
 
-@ConfigGroup("hootoneclick")
-public interface UnethicalOneClickConfig extends Config
+@ConfigGroup("lucidoneclick")
+public interface LucidOneClickConfig extends Config
 {
 	@ConfigSection(
 			name = "Game Objects",

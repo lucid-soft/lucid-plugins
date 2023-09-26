@@ -33,16 +33,16 @@ import java.util.List;
 import java.util.Map;
 
 @PluginDescriptor(
-		name = "Unethical One Click",
+		name = "Lucid One Click",
 		description = "Allows you to One-Click interactions",
 		enabledByDefault = false
 )
 @Slf4j
 @Extension
-public class UnethicalOneClickPlugin extends Plugin
+public class LucidOneClickPlugin extends Plugin
 {
 	@Inject
-	private UnethicalOneClickConfig config;
+	private LucidOneClickConfig config;
 
 	@Inject
 	private Client client;
@@ -62,15 +62,15 @@ public class UnethicalOneClickPlugin extends Plugin
 	private final Map<String, String> playerConfigs = new HashMap<>();
 
 	@Provides
-	public UnethicalOneClickConfig getConfig(ConfigManager configManager)
+	public LucidOneClickConfig getConfig(ConfigManager configManager)
 	{
-		return configManager.getConfig(UnethicalOneClickConfig.class);
+		return configManager.getConfig(LucidOneClickConfig.class);
 	}
 
 	@Subscribe
 	public void onConfigChanged(ConfigChanged e)
 	{
-		if (!e.getGroup().equals("hootoneclick"))
+		if (!e.getGroup().equals("lucidoneclick"))
 		{
 			return;
 		}

@@ -26,7 +26,7 @@ import java.util.LinkedHashMap;
 import java.util.Map;
 
 @Extension
-@PluginDescriptor(name = "Unethical Prayer", enabledByDefault = false)
+@PluginDescriptor(name = "Lucid Prayer", enabledByDefault = false)
 @Slf4j
 public class PrayerPlugin extends Plugin
 {

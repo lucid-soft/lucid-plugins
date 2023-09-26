@@ -6,7 +6,7 @@ import net.runelite.client.config.ConfigItem;
 
 import java.util.Set;
 
-@ConfigGroup("unethicalprayer")
+@ConfigGroup("lucidprayer")
 public interface PrayerConfig extends Config
 {
 	@ConfigItem(
