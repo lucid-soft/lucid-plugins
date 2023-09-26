@@ -7,7 +7,7 @@ import net.runelite.client.config.*;
 import java.awt.*;
 
 @ConfigGroup("gauntlet")
-public class LucidGauntletConfig implements Config
+public interface LucidGauntletConfig extends Config
 {
     // Sections
     @ConfigSection(
@@ -16,7 +16,7 @@ public class LucidGauntletConfig implements Config
             position = 0,
             keyName = "resourcesSection"
     )
-    final String resourcesSection = "Resources";
+    String resourcesSection = "Resources";
 
     @ConfigSection(
             name = "Utilities",
@@ -24,7 +24,7 @@ public class LucidGauntletConfig implements Config
             position = 1,
             keyName = "utilitiesSection"
     )
-    final String utilitiesSection = "Utilities";
+    String utilitiesSection = "Utilities";
 
     @ConfigSection(
             name = "Npcs",
@@ -32,7 +32,7 @@ public class LucidGauntletConfig implements Config
             position = 2,
             keyName = "npcSection"
     )
-    final String npcSection = "Npcs";
+    String npcSection = "Npcs";
 
     @ConfigSection(
             name = "Hunllef",
@@ -40,7 +40,7 @@ public class LucidGauntletConfig implements Config
             position = 3,
             keyName = "hunllefSection"
     )
-    final String hunllefSection = "Hunllef";
+    String hunllefSection = "Hunllef";
 
     @ConfigSection(
             name = "Projectiles",
@@ -48,7 +48,7 @@ public class LucidGauntletConfig implements Config
             position = 4,
             keyName = "projectilesSection"
     )
-    final String projectilesSection = "Projectiles";
+    String projectilesSection = "Projectiles";
 
     @ConfigSection(
             name = "Tornadoes",
@@ -56,7 +56,7 @@ public class LucidGauntletConfig implements Config
             position = 5,
             keyName = "tornadoesSection"
     )
-    final String tornadoesSection = "Tornadoes";
+    String tornadoesSection = "Tornadoes";
 
     @ConfigSection(
             name = "Player",
@@ -64,7 +64,7 @@ public class LucidGauntletConfig implements Config
             position = 6,
             keyName = "playerSection"
     )
-    final String playerSection = "Player";
+    String playerSection = "Player";
 
     @ConfigSection(
             name = "Timer",
@@ -72,7 +72,7 @@ public class LucidGauntletConfig implements Config
             position = 7,
             keyName = "timerSection"
     )
-    final String timerSection = "Timer";
+    String timerSection = "Timer";
 
     @ConfigSection(
             name = "Other",
@@ -80,7 +80,7 @@ public class LucidGauntletConfig implements Config
             position = 8,
             keyName = "otherSection"
     )
-    final String otherSection = "Other";
+    String otherSection = "Other";
 
     // Resources Section
 
@@ -91,7 +91,7 @@ public class LucidGauntletConfig implements Config
             keyName = "resourceOverlay",
             section = resourcesSection
     )
-    public boolean resourceOverlay()
+    public default boolean resourceOverlay()
     {
         return false;
     }
@@ -110,7 +110,7 @@ public class LucidGauntletConfig implements Config
             unhide = "resourceOverlay"
     )
     @Units(Units.POINTS)
-    int resourceIconSize()
+    default int resourceIconSize()
     {
         return 18;
     }
@@ -129,7 +129,7 @@ public class LucidGauntletConfig implements Config
             unhide = "resourceOverlay"
     )
     @Units(Units.POINTS)
-    public int resourceTileOutlineWidth()
+    public default int resourceTileOutlineWidth()
     {
         return 1;
     }
@@ -144,7 +144,7 @@ public class LucidGauntletConfig implements Config
             hidden = true,
             unhide = "resourceOverlay"
     )
-    public Color resourceTileOutlineColor()
+    public default Color resourceTileOutlineColor()
     {
         return Color.YELLOW;
     }
@@ -159,7 +159,7 @@ public class LucidGauntletConfig implements Config
             hidden = true,
             unhide = "resourceOverlay"
     )
-    public Color resourceTileFillColor()
+    public default Color resourceTileFillColor()
     {
         return new Color(255, 255, 255, 50);
     }
@@ -171,7 +171,7 @@ public class LucidGauntletConfig implements Config
             keyName = "resourceOutline",
             section = resourcesSection
     )
-    public boolean resourceOutline()
+    public default boolean resourceOutline()
     {
         return false;
     }
@@ -190,7 +190,7 @@ public class LucidGauntletConfig implements Config
             unhide = "resourceOutline"
     )
     @Units(Units.POINTS)
-    public int resourceOutlineWidth()
+    public default int resourceOutlineWidth()
     {
         return 1;
     }
@@ -205,7 +205,7 @@ public class LucidGauntletConfig implements Config
             hidden = true,
             unhide = "resourceOutline"
     )
-    public Color resourceOutlineColor()
+    public default Color resourceOutlineColor()
     {
         return Color.YELLOW;
     }
@@ -218,7 +218,7 @@ public class LucidGauntletConfig implements Config
             section = resourcesSection,
             enumClass = ResourceFilter.class
     )
-    public ResourceFilter resourceTracker()
+    public default ResourceFilter resourceTracker()
     {
         return ResourceFilter.OFF;
     }
@@ -233,7 +233,7 @@ public class LucidGauntletConfig implements Config
             unhide = "resourceTracker",
             unhideValue = "CUSTOM"
     )
-    public int resourceOre()
+    public default int resourceOre()
     {
         return 3;
     }
@@ -248,7 +248,7 @@ public class LucidGauntletConfig implements Config
             unhide = "resourceTracker",
             unhideValue = "CUSTOM"
     )
-    public int resourceBark()
+    public default int resourceBark()
     {
         return 3;
     }
@@ -263,7 +263,7 @@ public class LucidGauntletConfig implements Config
             unhide = "resourceTracker",
             unhideValue = "CUSTOM"
     )
-    public int resourceTirinum()
+    public default int resourceTirinum()
     {
         return 3;
     }
@@ -278,7 +278,7 @@ public class LucidGauntletConfig implements Config
             unhide = "resourceTracker",
             unhideValue = "CUSTOM"
     )
-    public int resourceGrym()
+    public default int resourceGrym()
     {
         return 2;
     }
@@ -293,7 +293,7 @@ public class LucidGauntletConfig implements Config
             unhide = "resourceTracker",
             unhideValue = "CUSTOM"
     )
-    public int resourceFrame()
+    public default int resourceFrame()
     {
         return 2;
     }
@@ -308,7 +308,7 @@ public class LucidGauntletConfig implements Config
             unhide = "resourceTracker",
             unhideValue = "CUSTOM"
     )
-    public int resourcePaddlefish()
+    public default int resourcePaddlefish()
     {
         return 20;
     }
@@ -323,7 +323,7 @@ public class LucidGauntletConfig implements Config
             unhide = "resourceTracker",
             unhideValue = "CUSTOM"
     )
-    public int resourceShard()
+    public default int resourceShard()
     {
         return 320;
     }
@@ -338,7 +338,7 @@ public class LucidGauntletConfig implements Config
             unhide = "resourceTracker",
             unhideValue = "CUSTOM"
     )
-    public boolean resourceBowstring()
+    public default boolean resourceBowstring()
     {
         return false;
     }
@@ -353,7 +353,7 @@ public class LucidGauntletConfig implements Config
             unhide = "resourceTracker",
             unhideValue = "CUSTOM"
     )
-    public boolean resourceSpike()
+    public default boolean resourceSpike()
     {
         return false;
     }
@@ -368,7 +368,7 @@ public class LucidGauntletConfig implements Config
             unhide = "resourceTracker",
             unhideValue = "CUSTOM"
     )
-    public boolean resourceOrb()
+    public default boolean resourceOrb()
     {
         return false;
     }
@@ -382,7 +382,7 @@ public class LucidGauntletConfig implements Config
             keyName = "utilitiesOutline",
             section = utilitiesSection
     )
-    public boolean utilitiesOutline()
+    public default boolean utilitiesOutline()
     {
         return false;
     }
@@ -401,7 +401,7 @@ public class LucidGauntletConfig implements Config
             unhide = "utilitiesOutline"
     )
     @Units(Units.POINTS)
-    public int utilitiesOutlineWidth()
+    public default int utilitiesOutlineWidth()
     {
         return 4;
     }
@@ -416,7 +416,7 @@ public class LucidGauntletConfig implements Config
             hidden = true,
             unhide = "utilitiesOutline"
     )
-    public Color utilitiesOutlineColor()
+    public default Color utilitiesOutlineColor()
     {
         return Color.MAGENTA;
     }
@@ -430,7 +430,7 @@ public class LucidGauntletConfig implements Config
             keyName = "demibossOutline",
             section = npcSection
     )
-    public boolean demibossOutline()
+    public default boolean demibossOutline()
     {
         return false;
     }
@@ -449,7 +449,7 @@ public class LucidGauntletConfig implements Config
             unhide = "demibossOutline"
     )
     @Units(Units.POINTS)
-    public int demibossOutlineWidth()
+    public default int demibossOutlineWidth()
     {
         return 4;
     }
@@ -461,7 +461,7 @@ public class LucidGauntletConfig implements Config
             keyName = "strongNpcOutline",
             section = npcSection
     )
-    public boolean strongNpcOutline()
+    public default boolean strongNpcOutline()
     {
         return false;
     }
@@ -480,7 +480,7 @@ public class LucidGauntletConfig implements Config
             unhide = "strongNpcOutline"
     )
     @Units(Units.POINTS)
-    public int strongNpcOutlineWidth()
+    public default int strongNpcOutlineWidth()
     {
         return 2;
     }
@@ -495,7 +495,7 @@ public class LucidGauntletConfig implements Config
             hidden = true,
             unhide = "strongNpcOutline"
     )
-    public Color strongNpcOutlineColor()
+    public default Color strongNpcOutlineColor()
     {
         return Color.CYAN;
     }
@@ -507,7 +507,7 @@ public class LucidGauntletConfig implements Config
             keyName = "weakNpcOutline",
             section = npcSection
     )
-    public boolean weakNpcOutline()
+    public default boolean weakNpcOutline()
     {
         return false;
     }
@@ -526,7 +526,7 @@ public class LucidGauntletConfig implements Config
             unhide = "weakNpcOutline"
     )
     @Units(Units.POINTS)
-    public int weakNpcOutlineWidth()
+    public default int weakNpcOutlineWidth()
     {
         return 2;
     }
@@ -541,7 +541,7 @@ public class LucidGauntletConfig implements Config
             hidden = true,
             unhide = "weakNpcOutline"
     )
-    public Color weakNpcOutlineColor()
+    public default Color weakNpcOutlineColor()
     {
         return Color.CYAN;
     }
@@ -555,7 +555,7 @@ public class LucidGauntletConfig implements Config
             keyName = "hunllefOverlayAttackCounter",
             section = hunllefSection
     )
-    public boolean hunllefOverlayAttackCounter()
+    public default boolean hunllefOverlayAttackCounter()
     {
         return false;
     }
@@ -570,7 +570,7 @@ public class LucidGauntletConfig implements Config
             unhide = "hunllefOverlayAttackCounter",
             enumClass = FontStyle.class
     )
-    public FontStyle hunllefAttackCounterFontStyle()
+    public default FontStyle hunllefAttackCounterFontStyle()
     {
         return FontStyle.BOLD;
     }
@@ -589,7 +589,7 @@ public class LucidGauntletConfig implements Config
             unhide = "hunllefOverlayAttackCounter"
     )
     @Units(Units.POINTS)
-    public int hunllefAttackCounterFontSize()
+    public default int hunllefAttackCounterFontSize()
     {
         return 22;
     }
@@ -601,7 +601,7 @@ public class LucidGauntletConfig implements Config
             keyName = "hunllefOverlayWrongPrayerOutline",
             section = hunllefSection
     )
-    public boolean hunllefOverlayWrongPrayerOutline()
+    public default boolean hunllefOverlayWrongPrayerOutline()
     {
         return false;
     }
@@ -620,7 +620,7 @@ public class LucidGauntletConfig implements Config
             unhide = "hunllefOverlayWrongPrayerOutline"
     )
     @Units(Units.POINTS)
-    public int hunllefWrongPrayerOutlineWidth()
+    public default int hunllefWrongPrayerOutlineWidth()
     {
         return 4;
     }
@@ -632,7 +632,7 @@ public class LucidGauntletConfig implements Config
             keyName = "hunllefOutlineTile",
             section = hunllefSection
     )
-    public boolean hunllefOutlineTile()
+    public default boolean hunllefOutlineTile()
     {
         return false;
     }
@@ -651,7 +651,7 @@ public class LucidGauntletConfig implements Config
             unhide = "hunllefOutlineTile"
     )
     @Units(Units.POINTS)
-    public int hunllefTileOutlineWidth()
+    public default int hunllefTileOutlineWidth()
     {
         return 1;
     }
@@ -666,7 +666,7 @@ public class LucidGauntletConfig implements Config
             hidden = true,
             unhide = "hunllefOutlineTile"
     )
-    public Color hunllefOutlineColor()
+    public default Color hunllefOutlineColor()
     {
         return Color.WHITE;
     }
@@ -681,7 +681,7 @@ public class LucidGauntletConfig implements Config
             hidden = true,
             unhide = "hunllefOutlineTile"
     )
-    public Color hunllefFillColor()
+    public default Color hunllefFillColor()
     {
         return new Color(255, 255, 255, 0);
     }
@@ -693,7 +693,7 @@ public class LucidGauntletConfig implements Config
             keyName = "hunllefOverlayAttackStyleIcon",
             section = hunllefSection
     )
-    public boolean hunllefOverlayAttackStyleIcon()
+    public default boolean hunllefOverlayAttackStyleIcon()
     {
         return false;
     }
@@ -712,7 +712,7 @@ public class LucidGauntletConfig implements Config
             unhide = "hunllefOverlayAttackStyleIcon"
     )
     @Units(Units.POINTS)
-    int hunllefAttackStyleIconSize()
+    default int hunllefAttackStyleIconSize()
     {
         return 18;
     }
@@ -724,7 +724,7 @@ public class LucidGauntletConfig implements Config
             keyName = "hunllefPrayerAudio",
             section = hunllefSection
     )
-    boolean hunllefPrayerAudio()
+    default boolean hunllefPrayerAudio()
     {
         return false;
     }
@@ -738,7 +738,7 @@ public class LucidGauntletConfig implements Config
             keyName = "outlineProjectile",
             section = projectilesSection
     )
-    public boolean outlineProjectile()
+    public default boolean outlineProjectile()
     {
         return false;
     }
@@ -750,7 +750,7 @@ public class LucidGauntletConfig implements Config
             keyName = "overlayProjectileIcon",
             section = projectilesSection
     )
-    public boolean overlayProjectileIcon()
+    public default boolean overlayProjectileIcon()
     {
         return false;
     }
@@ -769,7 +769,7 @@ public class LucidGauntletConfig implements Config
             unhide = "overlayProjectileIcon"
     )
     @Units(Units.POINTS)
-    int projectileIconSize()
+    default int projectileIconSize()
     {
         return 18;
     }
@@ -783,7 +783,7 @@ public class LucidGauntletConfig implements Config
             keyName = "tornadoTickCounter",
             section = tornadoesSection
     )
-    public boolean tornadoTickCounter()
+    public default boolean tornadoTickCounter()
     {
         return false;
     }
@@ -798,7 +798,7 @@ public class LucidGauntletConfig implements Config
             unhide = "tornadoTickCounter",
             enumClass = FontStyle.class
     )
-    public FontStyle tornadoFontStyle()
+    public default FontStyle tornadoFontStyle()
     {
         return FontStyle.BOLD;
     }
@@ -812,7 +812,7 @@ public class LucidGauntletConfig implements Config
             hidden = true,
             unhide = "tornadoTickCounter"
     )
-    public boolean tornadoFontShadow()
+    public default boolean tornadoFontShadow()
     {
         return true;
     }
@@ -831,7 +831,7 @@ public class LucidGauntletConfig implements Config
             unhide = "tornadoTickCounter"
     )
     @Units(Units.POINTS)
-    public int tornadoFontSize()
+    public default int tornadoFontSize()
     {
         return 16;
     }
@@ -846,7 +846,7 @@ public class LucidGauntletConfig implements Config
             hidden = true,
             unhide = "tornadoTickCounter"
     )
-    public Color tornadoFontColor()
+    public default Color tornadoFontColor()
     {
         return Color.WHITE;
     }
@@ -858,7 +858,7 @@ public class LucidGauntletConfig implements Config
             keyName = "tornadoTileOutline",
             section = tornadoesSection
     )
-    public boolean tornadoTileOutline()
+    public default boolean tornadoTileOutline()
     {
         return false;
     }
@@ -877,7 +877,7 @@ public class LucidGauntletConfig implements Config
             unhide = "tornadoTileOutline"
     )
     @Units(Units.POINTS)
-    public int tornadoTileOutlineWidth()
+    public default int tornadoTileOutlineWidth()
     {
         return 1;
     }
@@ -892,7 +892,7 @@ public class LucidGauntletConfig implements Config
             hidden = true,
             unhide = "tornadoTileOutline"
     )
-    public Color tornadoOutlineColor()
+    public default Color tornadoOutlineColor()
     {
         return Color.YELLOW;
     }
@@ -907,7 +907,7 @@ public class LucidGauntletConfig implements Config
             hidden = true,
             unhide = "tornadoTileOutline"
     )
-    public Color tornadoFillColor()
+    public default Color tornadoFillColor()
     {
         return new Color(255, 255, 0, 50);
     }
@@ -922,7 +922,7 @@ public class LucidGauntletConfig implements Config
             section = playerSection,
             enumClass = PrayerHighlightMode.class
     )
-    public PrayerHighlightMode prayerOverlay()
+    public default PrayerHighlightMode prayerOverlay()
     {
         return PrayerHighlightMode.NONE;
     }
@@ -934,7 +934,7 @@ public class LucidGauntletConfig implements Config
             keyName = "flashOnWrongAttack",
             section = playerSection
     )
-    public boolean flashOnWrongAttack()
+    public default boolean flashOnWrongAttack()
     {
         return false;
     }
@@ -952,7 +952,7 @@ public class LucidGauntletConfig implements Config
             hidden = true,
             unhide = "flashOnWrongAttack"
     )
-    public int flashOnWrongAttackDuration()
+    public default int flashOnWrongAttackDuration()
     {
         return 25;
     }
@@ -967,7 +967,7 @@ public class LucidGauntletConfig implements Config
             hidden = true,
             unhide = "flashOnWrongAttack"
     )
-    public Color flashOnWrongAttackColor()
+    public default Color flashOnWrongAttackColor()
     {
         return new Color(255, 0, 0, 70);
     }
@@ -979,7 +979,7 @@ public class LucidGauntletConfig implements Config
             keyName = "flashOn51Method",
             section = playerSection
     )
-    public boolean flashOn51Method()
+    public default boolean flashOn51Method()
     {
         return false;
     }
@@ -997,7 +997,7 @@ public class LucidGauntletConfig implements Config
             hidden = true,
             unhide = "flashOn51Method"
     )
-    public int flashOn51MethodDuration()
+    public default int flashOn51MethodDuration()
     {
         return 25;
     }
@@ -1012,7 +1012,7 @@ public class LucidGauntletConfig implements Config
             hidden = true,
             unhide = "flashOn51Method"
     )
-    public Color flashOn51MethodColor()
+    public default Color flashOn51MethodColor()
     {
         return new Color(255, 190, 0, 50);
     }
@@ -1026,7 +1026,7 @@ public class LucidGauntletConfig implements Config
             description = "Display an overlay that tracks your gauntlet time.",
             section = timerSection
     )
-    public boolean timerOverlay()
+    public default boolean timerOverlay()
     {
         return false;
     }
@@ -1038,7 +1038,7 @@ public class LucidGauntletConfig implements Config
             description = "Display a chat message on death with your gauntlet time.",
             section = timerSection
     )
-    public boolean timerChatMessage()
+    public default boolean timerChatMessage()
     {
         return false;
     }
@@ -1053,7 +1053,7 @@ public class LucidGauntletConfig implements Config
             section = otherSection,
             enumClass = RenderDistance.class
     )
-    public RenderDistance resourceRenderDistance()
+    public default RenderDistance resourceRenderDistance()
     {
         return RenderDistance.FAR;
     }
@@ -1065,7 +1065,7 @@ public class LucidGauntletConfig implements Config
             keyName = "discoMode",
             section = otherSection
     )
-    public boolean discoMode()
+    public default boolean discoMode()
     {
         return false;
     }
